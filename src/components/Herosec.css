@@ -1,0 +1,149 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10%;
+  color: white;
+  overflow: hidden;
+  background: #000;
+}
+
+/* Particle Background */
+.particle-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Left Side Content */
+.hero-left {
+  flex: 1;
+  z-index: 2;
+  animation: fadeUp 1.5s ease-in-out forwards;
+}
+
+.hero-left h1 {
+  font-size: 2.8rem;
+  animation: slideIn 1.2s ease-out;
+}
+
+.hero-left h1 span {
+  color: #14f4d3;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 80px;
+  font-weight: 900;
+}
+
+.typing-text {
+  font-size: 2.4rem;
+  margin: 10px 0;
+  border-right: 3px solid #fff;
+  white-space: nowrap;
+  overflow: hidden;
+font-family: 'Times New Roman', Times, serif;
+  animation: typing 3s steps(30, end), blink 0.7s infinite;
+}
+
+.hero-left p {
+  max-width: 400px;
+  font-size: 2rem;
+  line-height: 1.6;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards 1.2s;
+  margin-bottom: 20px;
+}
+
+/* Resume Button */
+.btn-primary {
+  background: linear-gradient(45deg, #ed20a5, #00ffff);
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: rgb(4, 0, 0);
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+  display: inline-block;
+  animation: pulseGlow 2s infinite alternate;
+  font-size: 25px;
+  font:bold;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #ff5eff;
+}
+
+/* Right Side Image */
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+.profile-pic {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 70%;
+  border: 5px solid white;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero-right {
+    margin-top: 20px;
+  }
+
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* Animations */
+@keyframes fadeUp {
+  0% { transform: translateY(40px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideIn {
+  0% { transform: translateX(-50px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  0%, 50% { border-color: rgb(12, 243, 224); }
+  50%, 100% { border-color: transparent; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 10px #ff5eff; }
+  100% { box-shadow: 0 0 25px #00ffff; }
+}

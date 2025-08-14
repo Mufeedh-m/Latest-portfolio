@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+
+.project-timeline {
+  margin-top: 0;
+  padding-top: 0;
+  padding: 0 1rem 4rem;
+  font-family: 'Poppins', sans-serif;
+  color: #e0e7ff;
+  background-color: #000000;
+  box-shadow: 0 10px 25px rgb(0, 0, 0);
+}
+
+.project-timeline h2 {
+  margin-top:0;
+  padding-top:20px;
+  text-align: center;
+  color:aqua;
+  font-size: 3.5rem;
+  margin-bottom: 4rem;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+padding-top: 70px;
+font-family: 'Times New Roman', Times, serif;
+}
+
+/* Timeline vertical line */
+.timeline-container {
+  position: relative;
+  padding-left: 140px;
+  border-left: 4px solid #3b82f6;
+}
+
+/* Timeline item */
+.timeline-item {
+  position: relative;
+  margin-bottom: 3.5rem;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.3s ease;
+}
+.timeline-item:focus,
+.timeline-item:hover {
+  transform: translateX(10px);
+}
+
+/* Timeline dot */
+.timeline-dot {
+  position: absolute;
+  left: -14px;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  background-color: #17ffb9;
+  border-radius: 50%;
+  border: 4px solid #0f172a;
+  box-shadow: 0 0 8px #3b82f6;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.timeline-item:hover .timeline-dot,
+.timeline-item:focus .timeline-dot {
+  background-color: #60a5fa;
+  box-shadow: 0 0 12px #60a5fa;
+}
+
+/* Content */
+.timeline-content {
+  position: relative;
+  max-width: 450px;
+  color: #bfdbfe;
+  font-weight: 600;
+  user-select: none;
+  padding-bottom: 1.5rem;
+}
+
+.timeline-content h3 {
+    padding-left: 20px;
+  margin-bottom: 0.5rem;
+  font-size: 2.7rem;
+  letter-spacing: 0.03em;
+  font-family: sans-serif;
+}
+
+/* Links container */
+.project-links {
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+/* Links styling */
+.project-links a {
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  background-color: #000000;
+  color: white;
+  box-shadow: 0 3px 8px rgb(37 99 235 / 0.5);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-size: 0.95rem;
+}
+.project-links a:hover,
+.project-links a:focus {
+  background-color: #000205f9;
+  box-shadow: 0 0 15px #60a5fa;
+  outline: none;
+}
+
+/* Image wrapper */
+.image-wrapper {
+  position: absolute;
+  top: 0;
+  left: 105%;
+  width: 560px;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.6);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  transform: translateX(-20px);
+  user-select: none;
+  z-index: 10;
+}
+
+/* Show image on hover/focus */
+.timeline-item:hover .image-wrapper,
+.timeline-item:focus .image-wrapper {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+/* Image styling */
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .timeline-container {
+    padding-left: 40px;
+  }
+  .timeline-item {
+    transform: none !important;
+  }.image-wrapper {
+  position: absolute;
+  top: 0;
+  left: 250px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.6);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  transform: translateX(-20px);
+  user-select: none;
+  z-index: 10;
+}
+}

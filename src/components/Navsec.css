@@ -1,0 +1,107 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(0, 0, 0);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  transition: background 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+
+
+/* ===== Logo ===== */
+.logo {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/* ===== Nav Links ===== */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+ 
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+   font-size: 25px;
+}
+
+.nav-links li a:hover {
+  color: #38bdf8;
+}
+
+/* ===== Hamburger Icon ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+/* ===== Close Button ===== */
+.close-btn {
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+  display: none;
+}
+
+.close-btn:hover {
+  color: #38bdf8;
+}
+
+/* ===== Mobile Styles ===== */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+  .close-btn {
+ 
+  display: block;
+}
+
+  .nav-links {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    height: 100vh;
+    width: 250px;
+    background: rgba(0, 0, 0, 0.95);
+    padding: 2rem;
+    gap: 1.5rem;
+    transition: right 0.3s ease-in-out;
+    z-index: 1050;
+  }
+  .nav-links li a{
+    font-size: 25px;
+    margin-top: 20px;
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+}

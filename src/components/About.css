@@ -1,0 +1,70 @@
+.about-section {
+  background: black;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.about-wrapper {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+}
+
+.about-container {
+  border-radius: 20px;
+  padding: 2rem 2.5rem;
+  color: white;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(to right, blue, rgb(230, 32, 213), blue);
+  position: relative;
+  z-index: 1;
+  box-shadow:
+    rgba(18, 255, 247, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.about-container h2 {
+  font-size: 3.2rem;
+  margin-bottom: 1.5rem;
+  color: #f6f7f7;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: lighter;
+}
+
+.about-container p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #e2e8f0;
+}
+
+.highlight {
+  color: #38bdf8;
+  font-weight: bold;
+}
+
+/* Laptop Font Awesome icon animation */
+.laptop-path {
+  position: absolute;
+  font-size: 40px; /* size of the laptop icon */
+  color: #38bdf8; /* highlight color */
+  transform: translate(-50%, -50%);
+  animation: moveAround 8s linear infinite;
+  top: 0%;
+  left: 50%;
+  z-index: 2;
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 1.5rem;
+  }
+  .laptop-path {
+    font-size: 30px;
+  }
+}
